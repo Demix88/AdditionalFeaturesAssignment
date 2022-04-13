@@ -9,14 +9,19 @@ namespace AdditionalFeaturesAssignment
     
    public class CompanyUser
     {
-        public CompanyUser(string name) : this(name, "Jlk.05235.22")
+        public CompanyUser(string name) : this(name, username, SecretQuestion,secret, "Jlk.05235.22")
         {
 
         }
-        public CompanyUser(string name, string pass)
+        public CompanyUser(string name,string username,string question, string SecretQuestion, string pass)
         {
-            UserName = name;
+            
+            
+            Name = name;
+            UserName = username;
             UserPassword = pass;
+            
+            SecretAnswer = secret;
         }
 
         const string SecretQuestion = "What is your mothers maiden name?";
@@ -24,8 +29,7 @@ namespace AdditionalFeaturesAssignment
         string Name { get; set; }
         string UserName { get; set; }
         string UserPassword { get; set; }
-        
-
-        
-        }
+        public static string username { get; private set; }
+        public static string secret { get; private set; }
+    }
     }

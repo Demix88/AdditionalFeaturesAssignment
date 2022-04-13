@@ -12,6 +12,7 @@ namespace AdditionalFeaturesAssignment
         static void Main(string[] args)
         {
             var NewUser = new CompanyUser("David");
+            var NewUserA = new CompanyUser("Sarah");
             
         }
     }
